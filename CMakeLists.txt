@@ -129,3 +129,11 @@ endif()
 
 message(STATUS "Umicom Web Studio Module version: ${PROJECT_VERSION}")
 message(STATUS "Umicom Web Studio uses Framework-owned thin-client composition")
+
+include(
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../framework/cmake/UmicomApplicationProductisationContribution.cmake")
+umicom_add_application_productisation_contribution(
+    NAME "web-studio"
+    TARGET umicom_web_studio_productisation
+    SOURCE "src/productisation_contribution.c"
+    TEST_SOURCE "tests/test_productisation_contribution.c")
