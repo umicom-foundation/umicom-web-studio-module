@@ -1,0 +1,51 @@
+#-----------------------------------------------------------------------------
+# Umicom Web Studio Module
+# File: application.umicom.yaml
+#
+# PURPOSE:
+#   Declare Umicom Web Studio identity and thin-client boundaries for suite discovery.
+#
+# Created by: Sammy Hegab
+# Organisation: Umicom Foundation
+# Licence: MIT
+#-----------------------------------------------------------------------------
+schema: umicom.application.v1
+
+application:
+  id: org.umicom.web-studio
+  name: Umicom Web Studio
+  short_name: Web Studio
+  version: 0.1.0
+  executable: umicom-web-studio-console
+  aliases: [web-studio]
+
+framework:
+  minimum_version: 0.9.0
+  compatible_major: 0
+
+frontends:
+  - console
+
+entry:
+  kind: workbench
+  taskbar_group: development
+  pinned_by_default: false
+  default_layout: design
+
+capabilities:
+  - umicom.web
+  - umicom.frontend
+  - umicom.designer
+  - umicom.editor
+  - umicom.application.experience
+  - umicom.application.federation
+
+source_layout:
+  product_root: src
+  composition_root: src
+  console_frontend: src/console
+
+boundaries:
+  owns_reusable_framework_logic: false
+  owns_persistence: false
+  consumes_framework_services: true
