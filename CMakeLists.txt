@@ -75,6 +75,12 @@ if(COMMAND umicom_apply_sanitizers)
     umicom_apply_sanitizers(umicom_web_studio_module)
 endif()
 
+include(
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../framework/cmake/UmicomThinApplicationRuntime.cmake")
+umicom_extend_thin_application_runtime(
+    NAME "web-studio"
+    TARGET "umicom_web_studio_module")
+
 if(UMICOM_WEB_STUDIO_BUILD_CONSOLE)
     add_executable(umicom-web-studio-console
         src/console/main.c)
@@ -102,6 +108,20 @@ if(BUILD_TESTING)
     add_test(
         NAME web-studio.module.application
         COMMAND umicom_web_studio_module-test)
+
+    add_executable(umicom_web_studio_workspace-test
+        tests/test_workspace.c)
+    target_link_libraries(umicom_web_studio_workspace-test PRIVATE
+        Umicom::web_studio_module)
+    if(COMMAND umicom_apply_warnings)
+        umicom_apply_warnings(umicom_web_studio_workspace-test)
+    endif()
+    if(COMMAND umicom_apply_sanitizers)
+        umicom_apply_sanitizers(umicom_web_studio_workspace-test)
+    endif()
+    add_test(
+        NAME web-studio.module.workspace
+        COMMAND umicom_web_studio_workspace-test)
 endif()
 
 install(TARGETS umicom_web_studio_module

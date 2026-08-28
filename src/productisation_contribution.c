@@ -18,7 +18,7 @@ static const UmiProductApplicationAdoption ADOPTION = {
     "org.umicom.web-studio",
     "Umicom Web Studio",
     "umicom-web-studio-console",
-    UMI_PRODUCT_FRONTEND_CONSOLE | UMI_PRODUCT_FRONTEND_WEB,
+    UMI_PRODUCT_FRONTEND_FLAG_CONSOLE | UMI_PRODUCT_FRONTEND_FLAG_WEB,
     1,
     1,
     1,

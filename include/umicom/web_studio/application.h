@@ -25,12 +25,14 @@ extern "C" {
 /* Return the canonical Framework application identifier used by this product. */
 const char *umi_web_studio_application_id(void);
 
+const UmiApplicationExperienceDefinition *
+umi_web_studio_application_experience(void);
 /*
  * Initialise the product through the shared Framework thin-client helper.
  * The module does not create duplicate services, storage or workbench models.
  */
-UmiStatus umi_web_studio_application_init(
-    UmiApplicationThinClient *out_client);
+UmiStatus umi_web_studio_application_status(
+    UmiApplicationExperienceStatus *out_status);
 
 #ifdef __cplusplus
 }
