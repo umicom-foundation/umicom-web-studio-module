@@ -18,6 +18,7 @@
 
 #include "umicom/application/experience.h"
 #include "umicom/application/experience_status.h"
+#include "umicom/application/thin_client.h"
 
 #ifdef __cplusplus
 extern "C" {
@@ -34,6 +35,9 @@ umi_web_studio_application_experience(void);
  * Initialise the product through the shared Framework thin-client helper.
  * The module does not create duplicate services, storage or workbench models.
  */
+UmiStatus umi_web_studio_application_init(
+    UmiApplicationThinClient *out_client);
+
 UmiStatus umi_web_studio_application_status(
     UmiApplicationExperienceStatus *out_status);
 

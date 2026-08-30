@@ -29,6 +29,13 @@ umi_web_studio_application_experience(void)
         umi_web_studio_application_id());
 }
 
+UmiStatus umi_web_studio_application_init(
+    UmiApplicationThinClient *out_client)
+{
+    return umi_application_thin_client_init(
+        umi_web_studio_application_id(), out_client);
+}
+
 UmiStatus umi_web_studio_application_status(
     UmiApplicationExperienceStatus *out_status)
 {
