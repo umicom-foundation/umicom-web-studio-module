@@ -6,9 +6,12 @@
  *   Expose the thin Umicom Web Studio composition over the Framework-owned
  *   application experience, runtime, readiness and workbench services.
  *
- * Created by: Sammy Hegab
- * Organisation: Umicom Foundation
- * Licence: MIT
+ * AUTHOR AND ORGANISATION:
+ * Sammy Hegab
+ * Umicom Foundation
+ *
+ * LICENCE:
+ * MIT
  *---------------------------------------------------------------------------*/
 #ifndef UMICOM_WEB_STUDIO_APPLICATION_H
 #define UMICOM_WEB_STUDIO_APPLICATION_H

@@ -6,9 +6,12 @@
  *   Verify Umicom Web Studio resolves its canonical Framework experience and
  *   initialises the shared thin-client runtime without product-local services.
  *
- * Created by: Sammy Hegab
- * Organisation: Umicom Foundation
- * Licence: MIT
+ * AUTHOR AND ORGANISATION:
+ * Sammy Hegab
+ * Umicom Foundation
+ *
+ * LICENCE:
+ * MIT
  *---------------------------------------------------------------------------*/
 
 #include <assert.h>
