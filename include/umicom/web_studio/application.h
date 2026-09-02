@@ -29,6 +29,10 @@ extern "C" {
 /* Return the canonical Framework application identifier used by this product. */
 const char *umi_web_studio_application_id(void);
 
+/**
+ * Provide the web studio application experience operation used by this module and its
+ * client applications.
+ */
 const UmiApplicationExperienceDefinition *
 umi_web_studio_application_experience(void);
 /*
@@ -38,6 +42,10 @@ umi_web_studio_application_experience(void);
 UmiStatus umi_web_studio_application_init(
     UmiApplicationThinClient *out_client);
 
+/**
+ * Provide the web studio application status operation used by this module and its client
+ * applications.
+ */
 UmiStatus umi_web_studio_application_status(
     UmiApplicationExperienceStatus *out_status);
 
