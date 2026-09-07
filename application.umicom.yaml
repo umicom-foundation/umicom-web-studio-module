@@ -17,6 +17,8 @@ application:
   short_name: Web Studio
   version: 0.1.0
   executable: umicom-web-studio-console
+  native_executable: umicom-web-studio
+  console_executable: umicom-web-studio-console
   aliases: [web-studio]
 
 framework:
@@ -25,6 +27,8 @@ framework:
 
 frontends:
   - console
+  # Shared Framework GTK layout preview; domain services require controllers.
+  - gtk
 
 entry:
   kind: workbench
