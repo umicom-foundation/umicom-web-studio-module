@@ -183,3 +183,10 @@ umicom_add_application_productisation_contribution(
     TARGET umicom_web_studio_productisation
     SOURCE "src/productisation_contribution.c"
     TEST_SOURCE "tests/test_productisation_contribution.c")
+
+# Compose the common creative document, animation, note and export services.
+# Existing product controllers, consoles, tests and layouts remain active.
+include("${CMAKE_CURRENT_SOURCE_DIR}/../../framework/cmake/UmicomCreativeWorkspace.cmake")
+umicom_attach_creative_workspace(
+    NAME "web-studio"
+    TARGET umicom_web_studio_module)
