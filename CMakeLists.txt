@@ -190,3 +190,9 @@ include("${CMAKE_CURRENT_SOURCE_DIR}/../../framework/cmake/UmicomCreativeWorkspa
 umicom_attach_creative_workspace(
     NAME "web-studio"
     TARGET umicom_web_studio_module)
+
+# A working loopback website/API sample uses the canonical C Framework server.
+include("${CMAKE_CURRENT_SOURCE_DIR}/../../framework/cmake/UmicomLocalWebService.cmake")
+umicom_add_local_web_service(umicom-web-studio-local-service)
+
+install(FILES "${CMAKE_CURRENT_SOURCE_DIR}/docs/LOCAL_WEB_SERVICE.html" DESTINATION ${CMAKE_INSTALL_DATADIR}/umicom/applications/web-studio/docs)
